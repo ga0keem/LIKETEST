@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>우해톤 5조</title>
+
+        <!-- 카카오 공유하기 -->
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <script>
+        Kakao.init('코드입력');
+        Kakao.isInitialized();
+        </script>
+</head>
+<body>
+    <section id="main" class="my-5 py-5 px-4 mx-auto">
+        <h1 class="jgaegu">그때 그 시절, 난 어떤 학생이었을까?</h1>
+        <p1 class="jgaegu">
+            95년생~03년생이 하는 추억의 테스트</br>
+        </p1>
+        <p2 class="jgaegu">
+            꼭 해당 기간 출생이 아니어도 가능합니다.</br>
+        </p2>
+        <br>     
+        <button type="button" class="startBtn btn jgaegu" onclick="js:start()">테스트 시작</button>
+        <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+            <img src="./img/main.png" alt="title_img" class="img-fluid"/>
+        </div>
+        <div class="box"></div>
+
+    </section>
+    <section id="qna">
+        <div class="status mx-auto mt-5">
+
+            <div class="statusBar">
+
+            </div>
+
+            <div class="countStatus">
+
+            </div>
+
+        </div>
+        <div class="qBox my-5 py-3 mx-auto">
+
+        </div>
+    
+            <div class="row row-cols-1 row-cols-md-2 g-2 aBox mx-auto">
+                <div class="col">
+                  <div class="card">
+                    <img src="./img/main.png" class="card-img-top leftImage" alt="...">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="./img/main.png" class="card-img-top rightImage" alt="...">
+                  </div>
+                </div>
+            </div>
+        
+    </section>
+    <section id="result" class="mx-auto my-5 py-5 px-4">
+        <h2 class="jgaegu"> 테스트 결과</h2>
+        <div class="jgaegu"> 
+            <div class="resultIntro">
+
+            </div>
+            <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 mx-auto"></div>
+            <div class="resultName">
+
+            </div>
+        </div>
+
+        </div>
+        <div class="resultDesc">
+            <div class="resultDescTitle1">
+
+            </div>
+            <div class="resultDesc1 my-5 py-3 mx-auto ">
+
+            </div>
+
+            <div class="resultDescTitle2 row row-cols-1 row-cols-md-2 g-2 mx-auto">
+
+                <div class="resultDesc2">
+
+                </div>
+            </div>
+            
+            <div class="resultDescTitle3 row row-cols-1 row-cols-md-2 g-2 mx-auto">
+                <div class="resultDesc3">
+
+                </div>
+
+            </div>
+            
+        </div>
+        <div>
+            <a href="javascript:setShare()"><img src="./img/icon-kakao.png" title="카카오톡" class="sharebtn_custom"/></a>
+        </div>
+
+    </section>
+    <script src="./js/data.js"></script>
+    <script src="./js/mbti.js"></script>
+    <script type="text/javascript">
+        function setShare(){
+            var resultImg = document.querySelector('#resultImg'); 
+            var resultAlt = resultImg.firstElementChild.alt; 
+            const shareTitle = '나의 개발자 유형은 무엇일까? 나의 개발자 유형을 확인해보고 공유해보자!!';
+            const shareDes=infoList[resultAlt].name;
+            
+            const shareImage= 'html주소 입력' + 'img/title_img.png';
+            const shareURL = 'html주소 입력';
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                title: shareDes,
+                description: shareTitle,
+                imageUrl: shareImage,
+                link: {
+                    mobileWebUrl: shareURL,
+                    webUrl : shareURL,
+                },
+                },
+                buttons: [
+                {
+                    title: '결과 확인하기',
+                    link: {
+                    mobileWebUrl: shareURL,
+                    webUrl : shareURL
+                    },
+                },
+                ]
+            });
+        
+        }
+      </script>
+</body>
+</html>

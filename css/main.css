@@ -1,0 +1,40 @@
+#main{
+    background-color: whitesmoke;
+    text-align: center;
+    width: 80%;
+    border-radius: 20px;
+}
+p1{
+    font-size: 20px;
+}
+
+p2{
+    font-size: 13px;
+    color:#989898;
+}
+
+box{
+    position: absolute;
+    width: 375px;
+    height: 296px;
+    left: 0px;
+    top: 516px;
+    background-color:#C1D6FF;
+    padding : 5px 30px;
+
+}
+
+.startBtn{
+    padding: 5px 50px;
+    width: 239px;
+    height: 47px;
+    border: 3px solid #6894E9;
+    color: #6894E9;
+    border-radius: 8px;
+    font-size: 30px;
+}
+.startBtn:hover, .startBtn:active {
+    background-color: #6894E9;
+    color: white;
+    
+}
