@@ -13,16 +13,11 @@ p2{
     color:#989898;
 }
 
-box{
-    position: absolute;
-    width: 375px;
-    height: 296px;
-    left: 0px;
-    top: 516px;
-    background-color:#C1D6FF;
-    padding : 5px 30px;
-
+p3{
+    font-size: 18px;
+    color:black;
 }
+
 
 .startBtn{
     padding: 5px 50px;

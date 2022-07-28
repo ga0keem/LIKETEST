@@ -2,9 +2,9 @@ const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
 
-const endPoint = 5;
+const endPoint = 19;
 
-const select = [0,0,0,0];
+const select = [0,0,0,0,0,0,0,0,0,0,0,0];
 
 function addAnswer(answerText,qIdx,idx){
     var a = document.querySelector(".aBox");
@@ -39,6 +39,7 @@ function addAnswer(answerText,qIdx,idx){
             for(let i=0;i<children.length;i++){
                 children[i].style.display = 'none';
             }
+
             goNext(++qIdx);
         },450)
     },false)
@@ -79,7 +80,16 @@ function setResult(){
     const resultDescTitle3 = document.querySelector('.resultDescTitle3');
     resultDescTitle3.innerHTML = infoList[point].descTitle3;
     resultDesc3.innerHTML = infoList[point].desc3;
+
+    
 }
+function retry() {
+    document.querySelector('#result').style.display="none";
+    document.querySelector('#main').style.display="block";
+    const retry = document.querySelector('#retry').addEventListener('click', retry);
+  }
+
+
 
 function goResult(){
     qna.style.WebkitAnimation = "fadeOut 1s";
@@ -169,6 +179,7 @@ function goNext(qIdx){
 }
 
 function start(){
+
     main.style.WebkitAnimation = "fadeOut 1s";
     main.style.animation = "fadeOut 1s";
     setTimeout(()=>{

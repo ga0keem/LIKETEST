@@ -12,8 +12,22 @@
     border-radius: 20px;
   }
   
-  
-  
+  .startBtn{
+    font-family: JGaegujaengyi-Bold-KO;
+    padding: 5px 50px;
+    width: 50%;
+    height: 60px;
+    border: 3px solid #6894E9;
+    color: #6894E9;
+    border-radius: 8px;
+    font-size: 30px;
+}
+.startBtn:hover, .startBtn:active {
+    background-color: #6894E9;
+    color: white;
+    
+}
+
 .resultDesc1{
     font-size: 20px;
     font-family: GmarketSansLight;
@@ -50,6 +64,11 @@
     font-family: JGaegujaengyi-Bold-KO;
     background: #E9F0FF;
     border-radius: 14px;
+    text-align: center;
+    display: inline-block;
+    width: 40%;
+    padding : 5px 30px;
+    
   }
   
 
